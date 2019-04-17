@@ -12,7 +12,7 @@ public class ListOfNumbers {
     private List<Integer> list;
     private static final int SIZE = 10;
 
-    public ListOfNumbers(String fileLocation) {
+    public ListOfNumbers() {
         list = new ArrayList<>(SIZE);
         for (int i = 0; i < SIZE; i++)
             list.add(new Integer(i));

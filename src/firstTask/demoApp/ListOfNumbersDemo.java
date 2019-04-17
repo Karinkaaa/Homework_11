@@ -8,7 +8,7 @@ public class ListOfNumbersDemo {
         /* Доработать пример из ДЗ 10 на использование буфферизируемых потоков ввода-вывода. */
 
         String path = "E:\\testDir\\list_of_numbers.txt";
-        ListOfNumbers list = new ListOfNumbers(path);
+        ListOfNumbers list = new ListOfNumbers();
 
         try {
             list.writeContentToFile(path);
