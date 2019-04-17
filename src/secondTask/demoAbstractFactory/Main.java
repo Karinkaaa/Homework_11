@@ -16,24 +16,24 @@ public class Main {
          * сделать System.out.println("Имя компонента (button) Семейство (MacOS)")). */
 
         Scanner scanner = new Scanner(System.in);
-        AbstractFactory abstractFactory;
+        AbstractFactory factory;
 
         System.out.println("Enter the type of objects (m - MacOS, w - Windows):");
         String choice = scanner.nextLine();
 
         switch (choice) {
             case "m":
-                abstractFactory = new MacOS_Factory();
+                factory = new MacOS_Factory();
                 break;
             case "w":
-                abstractFactory = new WindowsFactory();
+                factory = new WindowsFactory();
                 break;
             default:
-                abstractFactory = null;
+                factory = null;
         }
 
-        if (abstractFactory != null) {
-            getInfoAboutFactory(abstractFactory);
+        if (factory != null) {
+            getInfoAboutFactory(factory);
         } else {
             System.out.println("Factory is not exists!");
         }
