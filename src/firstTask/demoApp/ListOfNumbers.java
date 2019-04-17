@@ -1,7 +1,7 @@
-package demoApp;
+package firstTask.demoApp;
 
-import myExceptions.FileIsEmptyException;
-import myExceptions.FileIsNotFoundException;
+import firstTask.myExceptions.FileIsEmptyException;
+import firstTask.myExceptions.FileIsNotFoundException;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -31,12 +31,14 @@ public class ListOfNumbers {
             file.createNewFile();
         }
 
-        Writer fileWriter = new FileWriter(file, true);
+        FileWriter fileWriter = new FileWriter(file, true);
+        BufferedWriter bw = new BufferedWriter(fileWriter);
+
         for (Integer integer : list) {
-            fileWriter.write(integer + "\n");
+            bw.write(integer + "\n");
         }
-        fileWriter.flush();
-        fileWriter.close();
+        bw.flush();
+        bw.close();
     }
 
     public List<Integer> readContentFromFile(String fileLocation) throws IOException {

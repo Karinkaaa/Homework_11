@@ -1,4 +1,4 @@
-package myExceptions;
+package firstTask.myExceptions;
 
 import java.io.IOException;
 
